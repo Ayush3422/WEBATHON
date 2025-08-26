@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-g" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Market Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'gray-900': '#121212',
+              'gray-800': '#1E1E1E',
+              'gray-700': '#2C2C2C',
+              'gray-600': '#3A3A3A',
+            },
+            animation: {
+              'flash-green': 'flash-green 0.7s ease-out',
+              'flash-red': 'flash-red 0.7s ease-out',
+            },
+            keyframes: {
+              'flash-green': {
+                '0%': { backgroundColor: 'transparent' },
+                '50%': { backgroundColor: 'rgba(74, 222, 128, 0.2)' },
+                '100%': { backgroundColor: 'transparent' },
+              },
+              'flash-red': {
+                '0%': { backgroundColor: 'transparent' },
+                '50%': { backgroundColor: 'rgba(248, 113, 113, 0.2)' },
+                '100%': { backgroundColor: 'transparent' },
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.8.2",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.15.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
